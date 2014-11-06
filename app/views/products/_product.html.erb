@@ -1,0 +1,23 @@
+<div class="product">
+  <h2>
+    <% if display_link_to_show %>
+      <%= link_to product.name, product %>
+    <% else %>
+      <%= product.name %>
+    <% end %>
+  </h2>
+  
+  <p>
+    <%= product.description %>
+  </p>
+  
+  <p>
+    <strong>Price:</strong>
+    <%= number_to_currency(product.price) %>
+  </p>
+  
+  <p>
+    <%= link_to 'Edit', edit_product_path(product) %> - 
+    <%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </p>
+</div>

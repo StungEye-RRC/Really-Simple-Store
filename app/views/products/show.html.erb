@@ -1,0 +1,7 @@
+<p id="notice"><%= notice %></p>
+
+<%= render partial: 'product',
+           object: @product,
+           locals: { display_link_to_show: false }%>
+
+<%= link_to 'Back', products_path %>
