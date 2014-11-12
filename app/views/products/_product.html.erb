@@ -7,6 +7,10 @@
     <% end %>
   </h2>
   
+  <% if product.category.present? %>
+    <p>Category: <%= product.category.name %></p>
+  <% end %>
+  
   <% if product.image_filename.present? %>
     <%= image_tag product.image_filename %>
   <% end %>
