@@ -3,7 +3,10 @@ Rails.application.routes.draw do
 
   resources :products
   
-  root to: 'products#index'
+  get 'store/:id' => 'store#show', as: 'store_show'
+  # For the associated action the id will be in params[:id]
+  
+  root to: 'store#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

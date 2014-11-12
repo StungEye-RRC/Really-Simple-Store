@@ -2,6 +2,7 @@
 
 <%= render partial: 'product',
            object: @product,
-           locals: { display_link_to_show: false }%>
+           locals: { display_link_to_show: false,
+                     display_link_to_edit: true}%>
 
 <%= link_to 'Back', products_path %>
