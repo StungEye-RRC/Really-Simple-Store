@@ -1,6 +1,6 @@
 class StoreController < ApplicationController
   def index
-    @products = Product.all
+    @products = Product.recent_products
   end
   # The associated view will be loaded: app/views/store/index.html.erb
   
