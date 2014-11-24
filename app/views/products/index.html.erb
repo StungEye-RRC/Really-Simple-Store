@@ -1,10 +1,8 @@
 <h1>Listing products</h1>
 
+<%= link_to 'New Product', new_product_path %>
+
 <%= render partial: 'product',
            collection: @products,
            locals: { display_link_to_show: true,
                      display_link_to_edit: true}%>
-
-<br>
-
-<%= link_to 'New Product', new_product_path %>
