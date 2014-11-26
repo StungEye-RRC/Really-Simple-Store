@@ -5,4 +5,9 @@
     <%= link_to 'Product Admin', products_path %> -
     <%= link_to 'Category Admin', categories_path %>
   </nav>
+  <br>
+  <%= form_tag search_results_path, method: :get do %>
+    <%= text_field_tag :search_keywords %>
+    <%= submit_tag 'Search' %>
+  <% end %>
 </header>
