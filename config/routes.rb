@@ -8,5 +8,7 @@ Rails.application.routes.draw do
   
   get 'search_results' => 'store#search_results', as: 'search_results'
   
+  post 'favourite_product/:id' => 'store#save_favourite_product', as: 'save_favorite_product'
+  
   root to: 'store#index'
 end

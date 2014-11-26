@@ -1,4 +1,7 @@
 <div class="product">
+  <% if @favourite_product.id == product.id %>
+    <p>This is your favourite product.</p>
+  <% end %>
   <h2>
     <% if display_link_to_show %>
       <%= link_to product.name, store_show_path(id: product.id) %>
@@ -22,6 +25,12 @@
   <p>
     <strong>Price:</strong>
     <%= number_to_currency(product.price) %>
+  </p>
+  
+  <p>
+    <%= link_to 'Set As Favourite Product',
+                save_favorite_product_path(product),
+                method: :post %>
   </p>
   
   <% if display_link_to_edit %>
