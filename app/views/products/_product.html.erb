@@ -1,5 +1,5 @@
 <div class="product">
-  <% if @favourite_product.id == product.id %>
+  <% if @favourite_product && @favourite_product.id == product.id %>
     <p>This is your favourite product.</p>
   <% end %>
   <h2>
